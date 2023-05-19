@@ -12,7 +12,7 @@ import {
 
 const Home = () => {
 	const router = useRouter();
-	const [searchTerm, setSearchTerm] = useState("");
+	const [searchTerm, setSearchTerm] = useState(""); //for search bar
 
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -42,7 +42,8 @@ const Home = () => {
 						setSearchTerm={setSearchTerm}
 						handleClick={() => {
 							if (searchTerm) {
-								router.push(`/search/${searchTerm}`);
+								//if it exists
+								router.push(`/search/${searchTerm}`); //renavigate to the search page
 							}
 						}}
 					/>
